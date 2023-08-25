@@ -43,10 +43,10 @@ def buy_and_sell_randomly(private_key, account_number):
                 nonce_buy = w3.eth.get_transaction_count(w3.eth.default_account)
                 tx_buy = {
                     'chainId': 8453,
-                    'gas': 100000,
+                    'gas': 89000,
                     'from': w3.eth.default_account,
                     'to': contract_address,
-                    'gasPrice': w3.to_wei('5', 'gwei'),
+                    'gasPrice': w3.to_wei('1.5', 'gwei'),
                     'nonce': nonce_buy,
                     'value': w3.to_wei(share_price * random_share_amount, "ether"),
                     'data': input_buy
@@ -67,10 +67,10 @@ def buy_and_sell_randomly(private_key, account_number):
                 nonce_sell = w3.eth.get_transaction_count(w3.eth.default_account)
                 tx_sell = {
                     'chainId': 8453,
-                    'gas': 100000,
+                    'gas': 78888,
                     'from': w3.eth.default_account,
                     'to': contract_address,
-                    'gasPrice': w3.to_wei('5', 'gwei'),
+                    'gasPrice': w3.to_wei('1.5', 'gwei'),
                     'nonce': nonce_sell,
                     'data': input_sell
                 }
